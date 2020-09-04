@@ -1,0 +1,382 @@
+i{
+  margin: 0px;
+  padding: 0px;
+}
+
+html{
+  height: 100%
+}
+
+body{
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  background-position: center top;
+  background-repeat: repeat-y;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin increment-text{
+  color: $font-color;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@mixin noSelect{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+
+//#B6D9E2
+$font-color:  white;
+$clock-color: transparent;
+$div-colors: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+$increment-colors: transparent;
+$shadow: 5px 5px 10px black;
+
+.noSelect{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+
+.label-container{
+  @include  noSelect;
+  text-align: center;
+  background: $div-colors;
+  margin-top: 20px;
+  height: 100px;
+  width: 250px;
+  font-size: 20px;
+  border-radius: 40px;
+}
+
+.lengths{
+  @include  noSelect;
+  color:  $font-color;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 20px;
+  height: 50px;
+  width: 100px;
+
+}
+
+
+
+.fa-arrow-up{
+  margin-top: 3px;
+  font-size: 30px;
+
+}
+
+.fa-arrow-down{
+  margin-top: 3px;
+  font-size: 30px;
+
+}
+.fa{
+  color:  $font-color;
+}
+.fa-play{
+
+  font-size: 30px;
+}
+
+.fa-pause{
+
+  margin-top: 15px;
+  font-size: 30px;
+}
+
+.fa-refresh{
+
+  display: block;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.increment{
+  margin-left: 15px;
+  height: 40px;
+  width: 40px;
+  background: $increment-colors;
+  cursor: pointer;
+}
+
+
+.decrement{
+  margin-left: 20px;
+  height: 40px;
+  width: 40px;
+  background: $increment-colors;
+  cursor: pointer;
+
+}
+
+.scale{
+  transition: transform 300ms;
+}
+
+.scale:hover{
+  transform: scale(1.3);
+  transition: transform 300ms;
+}
+
+.label{
+  @include  noSelect;
+  @include increment-text;
+  text-align: center;
+  margin: 0 auto;
+  height: 50px;
+  width: 225px;
+}
+
+#title{
+  @include  noSelect;
+  color: $font-color;
+  margin-top: 15%;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 6px 6px 4px black;
+}
+
+#title-container{
+  width: 300px;
+  height: 300px;
+  margin-top: 300px;
+  margin-left: 50px;
+}
+
+#container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+#labels{
+    display: flex;
+    height: 150px;
+    width: 100%;
+}
+
+
+
+
+#break-container{
+  display: flex;
+  flex-flow: wrap;
+  box-shadow: $shadow;
+}
+
+#session-container{
+  display: flex;
+  flex-flow: wrap;
+  margin-left: 100px;
+  box-shadow: -5px 5px 8px black;
+}
+#session-label{
+  @include  noSelect;
+  color: $font-color;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#clock{
+  @include  noSelect;
+  display: block;
+  color: $font-color;
+  margin-left: 15%;
+  margin-top: 420px;
+  height: 500px;
+  width: 600px;
+  background: $clock-color;
+  vertical-align: top;
+}
+
+#timer{
+  @include  noSelect;
+  margin: 0 auto;
+  height: 200px;
+  width: 300px;
+  border-radius: 80px;
+  background: $div-colors ;
+  box-shadow: $shadow;
+}
+
+#timer-label{
+  @include  noSelect;
+  padding-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#time-left{
+  font-size: 80px;
+  text-align: center;
+  margin: 0 auto;
+}
+#start_stop{
+  text-align: center;
+  flex-flow: row;
+  background: $div-colors;
+  height: 60px;
+  width: 60px;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: $shadow;
+}
+#reset{
+  text-align: center;
+  flex-flow: row;
+  margin-left: 40px;
+  background: $div-colors;
+  height: 60px;
+  width: 60px;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: $shadow;
+}
+#buttonContainer{
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+}
+
+#about-container{
+  width: 100px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+}
+
+#about{
+  @include  noSelect;
+  @include increment-text;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  transition: transform 500ms;
+  text-shadow: 2px 2px 4px black;
+  background: pink;
+  box-shadow: 3px 3px 10px black;
+  border-radius: 20px;
+  a{
+    color: white;
+    text-decoration: none;
+  }
+}
+
+#about:hover{
+  transform: scale(1.3);
+  transition: transform 500ms;
+}
+
+
+.pomo{
+  position: absolute;
+  z-index: -1;
+  padding: 1px;
+  top: -40px;
+  margin-left: -180px;
+  height: auto;
+  width:1000px;
+}
+
+.transparent{
+  opacity: 0;
+}
+
+//SCSS FOR ABOUT COMPONENT*****************
+.pText{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+#more{
+  margin-top: 50px;
+}
+
+#back{
+  text-align: center;
+  background-color: #e1b3ff;
+  color: white;
+  font-size: 30px;
+  width: 100px;
+  margin: 200px auto 0;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: transform 500ms;
+}
+
+#backLink{
+  color: inherit;
+  text-decoration: none;
+}
+
+#back:hover{
+  transform: scale(1.3);
+  transition: transform 500ms;
+}
+
+.container-fluid{
+  background: transparent;
+}
+
+
+//MEDIA QUERIES************
+@media only screen and (max-height: 960px) {
+  .pomo{
+    width: 800px;
+    margin-left: -80px;
+  }
+  #clock{
+    margin-top: 300px;
+    margin-left: 14%;
+  }
+  .label-container{
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 200px;
+    height: 100px;
+  }
+  .label{
+    font-size: 25px;
+  }
+  .decrement{
+    margin-left: 5px;
+  }
+  .lengths{
+    margin-left: 0px;
+  }
+  #timer{
+    height: 180px;
+    width: 250px;
+  }
+  #timer-label{
+    padding-top: 0px;
+  }
+
+}
